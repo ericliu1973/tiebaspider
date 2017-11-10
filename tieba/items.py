@@ -52,7 +52,7 @@ class BeihuaItem(scrapy.Item):
 
     def get_insert_sql(self):
         insert_sql = """
-                INSERT INTO tieba_雾霾(url,title,author_name,content,comments_num,
+                INSERT INTO your_name(url,title,author_name,content,comments_num,
                               created_time,crawl_time)
                 VALUES (%s, %s, %s, %s, %s, %s, %s)
                 ON DUPLICATE KEY UPDATE comments_num=VALUES(comments_num)
